@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Wroth -</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000"/>
- <updated>2017-04-22T00:34:12-04:00</updated>
- <id>http://localhost:4000</id>
+ <link href="http://www.wroth.com//atom.xml" rel="self"/>
+ <link href="http://www.wroth.com/"/>
+ <updated>2017-04-22T01:23:40-04:00</updated>
+ <id>http://www.wroth.com/</id>
  <author>
    <name>michael mcdermott</name>
    <email>mmcdermott2@student.gsu.edu</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>So, maybe this will work this this attempt</title>
-   <link href="http://localhost:4000/research/2017/04/21/and-so-it-begins.html"/>
+   <link href="http://www.wroth.com//research/2017/04/21/and-so-it-begins.html"/>
    <updated>2017-04-21T20:05:22-04:00</updated>
-   <id>http://localhost:4000/research/2017/04/21/and-so-it-begins</id>
+   <id>http://www.wroth.com//research/2017/04/21/and-so-it-begins</id>
    <content type="html">&lt;h2 id=&quot;so-i-have-this-theory-that-if-i-actually-make-an-effort-to-do-this-i-will-actually-do-it&quot;&gt;So I have this theory that if I actually make an effort to do this I will actually do it.&lt;/h2&gt;
 
 &lt;p&gt;I don’t know if it will work this time. I have tried before. But I think it may work this time since I am using githubs unlimited priviate .edu repos for all my research. I want to opensource a lot of that and in the process of writing it up and publishing it. We also have a group lab site that I/we are supposed to be maintaining that keeps getting pushed to the bottom of the to-do list. Maybe this will help with that too. It’s using a full CMS that is just overkill for what we use it for anyway.&lt;/p&gt;
@@ -48,9 +48,9 @@
  
  <entry>
    <title>Use my jekyll theme</title>
-   <link href="http://localhost:4000/2016/09/19/use-my-jekyll-theme.html"/>
+   <link href="http://www.wroth.com//2016/09/19/use-my-jekyll-theme.html"/>
    <updated>2016-09-19T16:10:00-04:00</updated>
-   <id>http://localhost:4000/2016/09/19/use-my-jekyll-theme</id>
+   <id>http://www.wroth.com//2016/09/19/use-my-jekyll-theme</id>
    <content type="html">&lt;h2 id=&quot;hints&quot;&gt;Hints&lt;/h2&gt;
 
 &lt;p&gt;If you want to use my jekyll theme, follow the instructions and host it yourself. Easily setup as a Github page.&lt;/p&gt;
@@ -117,9 +117,9 @@ See the &lt;a href=&quot;https://github.com/lukas-h/material-theme&quot;&gt;Gith
  
  <entry>
    <title>Markdown flavour</title>
-   <link href="http://localhost:4000/2016/09/19/welcome.html"/>
+   <link href="http://www.wroth.com//2016/09/19/welcome.html"/>
    <updated>2016-09-18T18:00:00-04:00</updated>
-   <id>http://localhost:4000/2016/09/19/welcome</id>
+   <id>http://www.wroth.com//2016/09/19/welcome</id>
    <content type="html">&lt;p&gt;I have some text.&lt;/p&gt;
 
 &lt;p&gt;I want some &lt;em&gt;italics&lt;/em&gt;.&lt;/p&gt;
