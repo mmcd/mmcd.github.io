@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wroth -</title>
+    <description>My thinking is that maybe if I put things in one place I will actually be able to keep track of them and find them later.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 22 Apr 2017 00:32:21 -0400</pubDate>
+    <lastBuildDate>Sat, 22 Apr 2017 00:32:21 -0400</lastBuildDate>
+    <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>So, maybe this will work this this attempt</title>
+        <description>&lt;h2 id=&quot;so-i-have-this-theory-that-if-i-actually-make-an-effort-to-do-this-i-will-actually-do-it&quot;&gt;So I have this theory that if I actually make an effort to do this I will actually do it.&lt;/h2&gt;
+
+&lt;p&gt;I don’t know if it will work this time. I have tried before. But I think it may work this time since I am using githubs unlimited priviate .edu repos for all my research. I want to opensource a lot of that and in the process of writing it up and publishing it. We also have a group lab site that I/we are supposed to be maintaining that keeps getting pushed to the bottom of the to-do list. Maybe this will help with that too. It’s using a full CMS that is just overkill for what we use it for anyway.&lt;/p&gt;
+
+&lt;h3 id=&quot;i-am-going-to-just-leave-the-example-posts-in-place-for-now-in-the-theme&quot;&gt;I am going to just leave the example posts in place for now in the theme.&lt;/h3&gt;
+
+&lt;p&gt;Maybe its lazy, but I am not at all familiar with markdown. I am just going to leave them there for now. it may annoy other people but this is mostly for me.&lt;/p&gt;
+
+&lt;h4 id=&quot;random-function-test&quot;&gt;random function test&lt;/h4&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function test() {
+  console.log(&quot;notice the blank line before this function?&quot;);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def main():
+	print(blah)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int main(int arc, char**argv) {
+	prinf(&quot;blah\n&quot;);
+	exit(0);
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Fri, 21 Apr 2017 20:05:22 -0400</pubDate>
+        <link>http://localhost:4000/research/2017/04/21/and-so-it-begins.html</link>
+        <guid isPermaLink="true">http://localhost:4000/research/2017/04/21/and-so-it-begins.html</guid>
+        
+        <category>first post</category>
+        
+        <category>thoughts</category>
+        
+        <category>self motivation</category>
+        
+        
+        <category>research</category>
+        
+      </item>
+    
+      <item>
+        <title>Use my jekyll theme</title>
+        <description>&lt;h2 id=&quot;hints&quot;&gt;Hints&lt;/h2&gt;
+
+&lt;p&gt;If you want to use my jekyll theme, follow the instructions and host it yourself. Easily setup as a Github page.&lt;/p&gt;
+
+&lt;p&gt;To add pages (for example a portfolio, an extra about page, and so on), you need to link them to the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; manually. Required to configure in this dimensions is a bit of html and jekyll know-how. Reading the &lt;a href=&quot;http://jekyllrb.com/docs/pages/&quot;&gt;Jekyll docs&lt;/a&gt; could help. All other things are easy to edit and configure, even without much jekyll experience.&lt;/p&gt;
+
+&lt;h4 id=&quot;theme-features&quot;&gt;Theme features&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Projects showcase&lt;/li&gt;
+  &lt;li&gt;RSS and ATOM feed&lt;/li&gt;
+  &lt;li&gt;Blogpost pagination&lt;/li&gt;
+  &lt;li&gt;SEO meta tags, &lt;em&gt;schema.org&lt;/em&gt; structured data&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dev.twitter.com/cards/getting-started&quot;&gt;twitter&lt;/a&gt; cards&lt;/li&gt;
+  &lt;li&gt;made with MaterializeCSS&lt;/li&gt;
+  &lt;li&gt;Disqus comments&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-get-the-sources&quot;&gt;1. Get the sources&lt;/h3&gt;
+
+&lt;h4 id=&quot;11-clone&quot;&gt;1.1 Clone&lt;/h4&gt;
+
+&lt;p&gt;Clone the repository from github:&lt;br /&gt;
+&lt;a href=&quot;https://github.com/lukas-h/material-theme.git&quot;&gt;https://github.com/lukas-h/material-theme.git&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;12-or-download&quot;&gt;1.2 or download&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/lukas-h/material-theme/archive/gh-pages.zip&quot;&gt;https://github.com/lukas-h/material-theme/archive/gh-pages.zip&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-configure&quot;&gt;2. Configure&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Replace all the configuration in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;_data/projects.yml&lt;/code&gt; by your own data. Change the name, email address, configure your your language settings.&lt;br /&gt;
+And most important: change the site’s URL! Optionally add your google analytics ID.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Put your address and legal info into &lt;code class=&quot;highlighter-rouge&quot;&gt;imprint.html&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Change the icon &lt;code class=&quot;highlighter-rouge&quot;&gt;images/favicon.png&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Replace the domain name in the &lt;code class=&quot;highlighter-rouge&quot;&gt;robots.txt&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Don’t forget the &lt;code class=&quot;highlighter-rouge&quot;&gt;README.md&lt;/code&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-start-writing-posts&quot;&gt;3. Start writing posts&lt;/h3&gt;
+&lt;p&gt;Replace the existing example post and then add your own!&lt;br /&gt;
+Have a look at the &lt;a href=&quot;http://jekyllrb.com/docs/posts/&quot;&gt;Jekyll docs&lt;/a&gt;
+about how to write blog posts.&lt;br /&gt;
+To add tags to your posts, look into the example, you’ll see that there is
+a line starting with &lt;code class=&quot;highlighter-rouge&quot;&gt;tags:&lt;/code&gt;. Add your keywords there.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-youre-done&quot;&gt;4. You’re done&lt;/h3&gt;
+&lt;p&gt;Take a stop on the Github project page. Feel free to give a star and share it with others!&lt;br /&gt;
+You have questions, feedback or something to improve, mail me or open issues on github. Contributions are always welcome.&lt;br /&gt;
+Thanks to them who have already &lt;a href=&quot;https://github.com/lukas-h/material-theme/graphs/contributors&quot;&gt;helped&lt;/a&gt; to improve, especially &lt;a href=&quot;https://github.com/varundey&quot;&gt;@varundey&lt;/a&gt;!&lt;br /&gt;
+See the &lt;a href=&quot;https://github.com/lukas-h/material-theme&quot;&gt;Github Project&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 19 Sep 2016 16:10:00 -0400</pubDate>
+        <link>http://localhost:4000/2016/09/19/use-my-jekyll-theme.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/09/19/use-my-jekyll-theme.html</guid>
+        
+        <category>english</category>
+        
+        <category>jekyll</category>
+        
+        <category>theme</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Markdown flavour</title>
+        <description>&lt;p&gt;I have some text.&lt;/p&gt;
+
+&lt;p&gt;I want some &lt;em&gt;italics&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I want some &lt;strong&gt;bold&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;this-is-heading-1&quot;&gt;this is heading 1&lt;/h1&gt;
+
+&lt;h2 id=&quot;this-is-heading-2&quot;&gt;this is heading 2&lt;/h2&gt;
+
+&lt;h3 id=&quot;this-is-heading-3&quot;&gt;this is heading 3&lt;/h3&gt;
+
+&lt;p&gt;you want a list?&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;first&lt;/li&gt;
+  &lt;li&gt;second&lt;/li&gt;
+  &lt;li&gt;third&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;you want an ordered list?&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;whatever&lt;/li&gt;
+  &lt;li&gt;whatever&lt;/li&gt;
+  &lt;li&gt;whatever&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Sun, 18 Sep 2016 18:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2016/09/19/welcome.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/09/19/welcome.html</guid>
+        
+        <category>example</category>
+        
+        <category>welcome</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

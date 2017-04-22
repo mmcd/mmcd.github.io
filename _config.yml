@@ -1,0 +1,69 @@
+title: "Wroth -"
+description: "My thinking is that maybe if I put things in one place I will actually be able to keep track of them and find them later."
+about: "I do research, allegedly, into geoinformatics, bioinformatics, high performance computing, and machine learning... I also fumble around blindly with cluster hardware."
+location: "Atlanta, GA, USA"
+email: mmcdermott2@student.gsu.edu
+baseurl: ""
+
+url: "http://www.wroth.com/" # replace by your site's url
+twitter_username: mjmcd
+github_username:  mmcd 
+author: "michael mcdermott"
+
+#mystuff
+collections:
+  categories:
+    output: true
+    permalink: /projects/:name/
+
+# google analytics tracking code, please change the value
+g_analytics: "UA-97870498-1"
+
+# add your disqus to enable comments
+disqus_shortname:
+
+# add your disqus to enable comments
+disqus_shortname:
+
+# language settings
+isolang: en
+close_btn: "Close"
+home_btn: "Home"
+projects_btn: "Projects"
+posts_btn: "Posts"
+imprint_btn: "Imprint"
+name_badge: "an article by"
+rss_badge: "Subscribe feed!"
+
+# build settings
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    tab_width: 4
+
+# third party gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+  - jemoji
+
+whitelist:
+  - jekyll-paginate
+  - jekyll-gist
+  - jemoji
+
+# exclude files
+exclude:
+  - LICENSE
+  - README.md
