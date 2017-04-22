@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:4000/research/2017/04/21/and-so-it-begins.html</loc>
+    <loc>http://www.wroth.com//research/2017/04/21/and-so-it-begins.html</loc>
     
     <lastmod>2017-04-21T20:05:22-04:00</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/2016/09/19/use-my-jekyll-theme.html</loc>
+    <loc>http://www.wroth.com//2016/09/19/use-my-jekyll-theme.html</loc>
     
     <lastmod>2016-09-19T16:10:00-04:00</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:4000/2016/09/19/welcome.html</loc>
+    <loc>http://www.wroth.com//2016/09/19/welcome.html</loc>
     
     <lastmod>2016-09-18T18:00:00-04:00</lastmod>
     
