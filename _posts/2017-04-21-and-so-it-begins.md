@@ -7,7 +7,7 @@ tags: [first post, thoughts, self motivation]
 author: "michael"
 ---
 
-## So I have this theory that if I actually make an effort to do this I will actually do it.
+## So I have this theory that if I actually make an effort to do this I will actually make a sizeable dent in it and accomplish something interesting instead of talking about it all the time.
 
 I don't know if it will work this time. I have tried before. But I think it may work this time since I am using githubs unlimited priviate .edu repos for all my research. I want to opensource a lot of that and in the process of writing it up and publishing it. We also have a group lab site that I/we are supposed to be maintaining that keeps getting pushed to the bottom of the to-do list. Maybe this will help with that too. It's using a full CMS that is just overkill for what we use it for anyway.
 
