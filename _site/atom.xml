@@ -4,7 +4,7 @@
  <title>Wroth -</title>
  <link href="http://www.wroth.com//atom.xml" rel="self"/>
  <link href="http://www.wroth.com/"/>
- <updated>2017-04-22T01:54:09-04:00</updated>
+ <updated>2017-04-22T01:54:24-04:00</updated>
  <id>http://www.wroth.com/</id>
  <author>
    <name>michael mcdermott</name>
@@ -25,7 +25,7 @@
 
 &lt;p&gt;Maybe its lazy, but I am not at all familiar with markdown. I am just going to leave them there for now. it may annoy other people but this is mostly for me.&lt;/p&gt;
 
-&lt;h4 id=&quot;random-function-test&quot;&gt;random function test&lt;/h4&gt;
+&lt;h4 id=&quot;random-syntax-highlighting-test&quot;&gt;random syntax highlighting test&lt;/h4&gt;
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;

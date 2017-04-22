@@ -15,7 +15,7 @@ I don't know if it will work this time. I have tried before. But I think it may 
 
 Maybe its lazy, but I am not at all familiar with markdown. I am just going to leave them there for now. it may annoy other people but this is mostly for me.
 
-#### random function test
+#### random syntax highlighting test
 ```javascript
 function test() {
   console.log("notice the blank line before this function?");
