@@ -16,18 +16,18 @@ I don't know if it will work this time. I have tried before. But I think it may 
 Maybe its lazy, but I am not at all familiar with markdown. I am just going to leave them there for now. it may annoy other people but this is mostly for me.
 
 #### random function test
-```
+```javascript
 function test() {
   console.log("notice the blank line before this function?");
 }
 ```
 
-```
+```python
 def main():
 	print(blah)
 ```
 
-```
+```c
 int main(int arc, char**argv) {
 	prinf("blah\n");
 	exit(0);
