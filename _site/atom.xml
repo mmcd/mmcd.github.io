@@ -4,7 +4,7 @@
  <title>Wroth - cranky... pretty much all the time these days</title>
  <link href="http://www.wroth.com//atom.xml" rel="self"/>
  <link href="http://www.wroth.com/"/>
- <updated>2017-04-22T23:34:59-04:00</updated>
+ <updated>2017-04-23T01:29:49-04:00</updated>
  <id>http://www.wroth.com/</id>
  <author>
    <name>michael mcdermott</name>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>random java hack</title>
-   <link href="http://www.wroth.com//misc/2017/04/22/random-java-hack.html"/>
+   <link href="http://www.wroth.com//snippets/2017/04/22/random-java-hack.html"/>
    <updated>2017-04-22T21:28:54-04:00</updated>
-   <id>http://www.wroth.com//misc/2017/04/22/random-java-hack</id>
+   <id>http://www.wroth.com//snippets/2017/04/22/random-java-hack</id>
    <content type="html">&lt;h2 id=&quot;nothing-really-new-to-see-here&quot;&gt;Nothing really new to see here&lt;/h2&gt;
 
 &lt;p&gt;You can find versions of this all over the internet, I am just tired of not saving my own hacks and fixes in easy to find ways. This basically redirects stdout to something else, saves it, then puts stdout back. allowing me to capture output and fix something I shouldn’t have had to fix because the sample code for the class (not the Professor’s fault) is completely undocumented and wierd. It basically let me drop prefixes on a toy java database because the way you pulled tables created copies instead of clones.&lt;/p&gt;
