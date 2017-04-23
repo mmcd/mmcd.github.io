@@ -2,7 +2,7 @@
 layout: post
 title: "random java hack"
 date: 2017-04-22 21:28:54 EDT
-category: misc
+category: snippets
 tags: [programming, java, hacks, io]
 author: "michael"
 ---
