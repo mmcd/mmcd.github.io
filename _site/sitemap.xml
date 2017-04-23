@@ -2,6 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.wroth.com//misc/2017/04/22/random-java-hack.html</loc>
+    
+    <lastmod>2017-04-22T21:28:54-04:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.wroth.com//research/2017/04/21/and-so-it-begins.html</loc>
     
     <lastmod>2017-04-21T20:05:22-04:00</lastmod>
