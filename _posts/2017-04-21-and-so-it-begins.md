@@ -2,8 +2,8 @@
 layout: post
 title: "So, maybe this will work this this attempt"
 date: 2017-04-21 20:05:22 EDT
-category: research
-tags: [first post, thoughts, self motivation]
+category: [misc]
+tags: [first post, thoughts, self motivation, misc]
 author: "michael"
 ---
 
