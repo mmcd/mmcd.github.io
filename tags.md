@@ -2,14 +2,16 @@
 layout: page
 title: Tags
 ---
+<script src="http://www.wroth.com/js/d3.js"></script>
+<script src="http://www.wroth.com/js/d3.layout.cloud.js"></script>
+
 <svg class="cloud" style="width:95%;height:450px">
     <g></g>
 </svg>
 <div class="tag_posts">
 </div>
 
-<script src="{{ '/js/d3.js' | prepend: site.baseurl }}"></script>
-<script src="{{ '/js/d3.layout.cloud.js' | prepend: site.baseurl }}"></script>
+
 
 <script>
     var tags = [
