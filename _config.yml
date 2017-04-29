@@ -27,7 +27,7 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     tab_width: 4
-    css_class: 'darkly'
+    css_class: 'freya'
     span:
       line_numbers: false
     block:
