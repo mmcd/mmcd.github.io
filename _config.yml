@@ -1,5 +1,5 @@
 markdown: kramdown
-highlighter: rouge
+highlighter: pygments
 permalink: /posts/:title.html
 excerpt_separator: "<!-- more -->"
 
@@ -24,7 +24,7 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
-  syntax_highlighter: rouge
+  syntax_highlighter: pygments
   syntax_highlighter_opts:
     tab_width: 4
     # css_class: 'syntax'
