@@ -5,8 +5,8 @@ title: Tags
 
 This doesn't work yet, I don't know why. It's javascript. Javascript is terrible, its not even erroring it just... does nothing.
 
-<script src="http://www.wroth.com/js/d3.js"></script>
-<script src="http://www.wroth.com/js/d3.layout.cloud.js"></script>
+<script src="//www.wroth.com/js/d3.js"></script>
+<script src="//www.wroth.com/js/d3.layout.cloud.js"></script>
 
 <svg class="cloud" style="width:95%;height:450px">
     <g></g>

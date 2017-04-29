@@ -1,3 +1,5 @@
+bundle exec jekyll build
+jekyll build
 git add . --all
 git commit -m "bleh"
 git push
