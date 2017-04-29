@@ -1,4 +1,5 @@
-yout: post
+---
+layout: post
 title: "So, maybe this will work this this attempt"
 date: 2017-04-21 20:05:22 EDT
 category: research
