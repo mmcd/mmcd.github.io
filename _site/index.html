@@ -88,14 +88,14 @@
 			
 				<li>
 				  <a href="/posts/papers.html"><span class="label">
-					papers
+					Papers
 					</span>
 				  </a>
 				</li>
 			
 				<li>
 				  <a href="/posts/other.html"><span class="label">
-					misc
+					Other
 					</span>
 				  </a>
 				</li>
@@ -139,78 +139,45 @@
 <h2 id="nothing-really-new-to-see-here">Nothing really new to see here</h2>
 
 <p>You can find versions of this all over the internet, I am just tired of not saving my own hacks and fixes in easy to find ways. This basically redirects stdout to something else, saves it, then puts stdout back. allowing me to capture output and fix something I shouldn’t have had to fix because the sample code for the class (not the Professor’s fault) is completely undocumented and wierd. It basically let me drop prefixes on a toy java database because the way you pulled tables created copies instead of clones.</p>
-<div class="language-java highlighter-rouge"><div class="syntax"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24</pre></td><td class="code"><pre>        <span class="n">ByteArrayOutputStream</span> <span class="n">bstream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ByteArrayOutputStream</span><span class="o">();</span>
-        <span class="n">PrintStream</span> <span class="n">pstream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PrintStream</span><span class="o">(</span><span class="n">bstream</span><span class="o">);</span>
-        <span class="n">PrintStream</span> <span class="n">stock</span> <span class="o">=</span> <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">;</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">setOut</span><span class="o">(</span><span class="n">pstream</span><span class="o">);</span>
-        <span class="n">dbengine</span><span class="o">.</span><span class="na">displaySchema</span><span class="o">();</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">flush</span><span class="o">();</span>
-        <span class="n">System</span><span class="o">.</span><span class="na">setOut</span><span class="o">(</span><span class="n">stock</span><span class="o">);</span>
-        <span class="n">String</span> <span class="n">HACK</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
-        <span class="k">try</span> <span class="o">{</span>
-            <span class="n">HACK</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="n">bstream</span><span class="o">.</span><span class="na">toByteArray</span><span class="o">(),</span> <span class="s">"UTF-8"</span><span class="o">);</span>
-        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">UnsupportedEncodingException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">);</span>
-        <span class="o">}</span>
-        <span class="c1">// System.out.println(HACK);</span>
-        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">prefix</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
-        <span class="n">String</span><span class="o">[]</span> <span class="n">tmp</span> <span class="o">=</span> <span class="n">HACK</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">"\\n"</span><span class="o">);</span>
-        <span class="k">for</span><span class="o">(</span><span class="n">String</span> <span class="n">t</span> <span class="o">:</span> <span class="n">tmp</span><span class="o">)</span> <span class="o">{</span>
-            <span class="k">if</span><span class="o">(</span><span class="n">t</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="s">"("</span><span class="o">))</span> 
-                <span class="n">prefix</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">t</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">"\\("</span><span class="o">)[</span><span class="mi">0</span><span class="o">]);</span>
-        <span class="o">}</span>
-        <span class="k">for</span><span class="o">(</span><span class="n">String</span> <span class="n">p</span> <span class="o">:</span> <span class="n">prefix</span><span class="o">)</span> <span class="o">{</span>
-            <span class="n">Relation</span> <span class="n">r</span> <span class="o">=</span> <span class="n">dbengine</span><span class="o">.</span><span class="na">getRelation</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
-            <span class="n">r</span><span class="o">.</span><span class="na">prefixColumnNames</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
-        <span class="o">}</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+<pre><code class="language-java">        ByteArrayOutputStream bstream = new ByteArrayOutputStream();
+        PrintStream pstream = new PrintStream(bstream);
+        PrintStream stock = System.out;
+        System.setOut(pstream);
+        dbengine.displaySchema();
+        System.out.flush();
+        System.setOut(stock);
+        String HACK = "";
+        try {
+            HACK = new String(bstream.toByteArray(), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            System.out.println(e);
+        }
+        // System.out.println(HACK);
+        ArrayList&lt;String&gt; prefix = new ArrayList&lt;String&gt;();
+        String[] tmp = HACK.split("\\n");
+        for(String t : tmp) {
+            if(t.contains("(")) 
+                prefix.add(t.split("\\(")[0]);
+        }
+        for(String p : prefix) {
+            Relation r = dbengine.getRelation(p);
+            r.prefixColumnNames(p);
+        }
+</code></pre>
 
 	<p><h3><a href="/posts/random-java-hack.html">full text &raquo;</a></h3></p>
 <hr>
 
 <h2>
   <a href="/posts/and-so-it-begins.html">
-    And So It Begins
+    So, maybe this will work this this attempt
   </a> 
   <div class="post-date">
 	<span class="glyphicon glyphicon-time"></span>
-	2017-04-21
+	2017-04-22
   </div>
 </h2>
 <hr>
-<p>yout: post
-title: “So, maybe this will work this this attempt”
-date: 2017-04-21 20:05:22 EDT
-category: research
-tags: [first post, thoughts, self motivation]
-author: “michael”
-—</p>
-
 <h2 id="so-i-have-this-theory-that-if-i-actually-make-an-effort-to-do-this-i-will-actually-make-a-sizeable-dent-in-it-and-accomplish-something-interesting-instead-of-talking-about-it-all-the-time">So I have this theory that if I actually make an effort to do this I will actually make a sizeable dent in it and accomplish something interesting instead of talking about it all the time.</h2>
 
 <p>I don’t know if it will work this time. I have tried before. But I think it may work this time since I am using githubs unlimited priviate .edu repos for all my research. I want to opensource a lot of that and in the process of writing it up and publishing it. We also have a group lab site that I/we are supposed to be maintaining that keeps getting pushed to the bottom of the to-do list. Maybe this will help with that too. It’s using a full CMS that is just overkill for what we use it for anyway.</p>
@@ -220,32 +187,20 @@ author: “michael”
 <p>Maybe its lazy, but I am not at all familiar with markdown. I am just going to leave them there for now. it may annoy other people but this is mostly for me.</p>
 
 <h4 id="random-syntax-highlighting-test">random syntax highlighting test</h4>
-<div class="language-javascript highlighter-rouge"><div class="syntax"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">test</span><span class="p">()</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"notice the blank line before this function?"</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+<pre><code class="language-javascript">function test() {
+  console.log("notice the blank line before this function?");
+}
+</code></pre>
 
-<div class="language-python highlighter-rouge"><div class="syntax"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-	<span class="k">print</span><span class="p">(</span><span class="n">blah</span><span class="p">)</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+<pre><code class="language-python">def main():
+	print(blah)
+</code></pre>
 
-<div class="language-c highlighter-rouge"><div class="syntax"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
-2
-3
-4</pre></td><td class="code"><pre><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">arc</span><span class="p">,</span> <span class="kt">char</span><span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
-	<span class="n">prinf</span><span class="p">(</span><span class="s">"blah</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
-	<span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-	<span class="p">}</span>
-</pre></td></tr></tbody></table>
-</div>
-</div>
+<pre><code class="language-c">int main(int arc, char**argv) {
+	prinf("blah\n");
+	exit(0);
+	}
+</code></pre>
 
 	<p><h3><a href="/posts/and-so-it-begins.html">full text &raquo;</a></h3></p>
 <hr>
@@ -341,7 +296,7 @@ author: “michael”
 				
                   <li>
                     <a href="/posts/and-so-it-begins.html">
-                      And So It Begins
+                      So, maybe this will work this this attempt
                     </a>
                   </li>
 				  
