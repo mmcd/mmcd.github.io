@@ -1,7 +1,10 @@
 ---
-layout: page
+layout: default
 title: Tags
 ---
+
+This doesn't work yet, I don't know why. It's javascript. Javascript is terrible, its not even erroring it just... does nothing.
+
 <script src="http://www.wroth.com/js/d3.js"></script>
 <script src="http://www.wroth.com/js/d3.layout.cloud.js"></script>
 
@@ -10,7 +13,6 @@ title: Tags
 </svg>
 <div class="tag_posts">
 </div>
-
 
 
 <script>

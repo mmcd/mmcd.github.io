@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "random java hack"
+title: "redirect and capture stdout"
 date: 2017-04-22 21:28:54 EDT
 category: java
 tags: [programming, java, hacks, io]

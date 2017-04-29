@@ -11,7 +11,7 @@ author: "michael"
 
 I don't know if it will work this time. I have tried before. But I think it may work this time since I am using githubs unlimited priviate .edu repos for all my research. I want to opensource a lot of that and in the process of writing it up and publishing it. We also have a group lab site that I/we are supposed to be maintaining that keeps getting pushed to the bottom of the to-do list. Maybe this will help with that too. It's using a full CMS that is just overkill for what we use it for anyway.
 
-### I am going to just leave the example posts in place for now in the theme.
+### some code examples. I am lazy and may need a quick refernece later.
 
 Maybe its lazy, but I am not at all familiar with markdown. I am just going to leave them there for now. it may annoy other people but this is mostly for me.
 

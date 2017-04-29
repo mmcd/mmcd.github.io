@@ -4,7 +4,7 @@
  <title></title>
  <link href="http://www.wroth.com/atom.xml" rel="self"/>
  <link href="http://www.wroth.com"/>
- <updated>2017-04-29T07:57:43+00:00</updated>
+ <updated>2017-04-29T08:03:51+00:00</updated>
  <author>
    <name>michael mcdermott</name>
    <email>mmcdermott2#student.gsu.edu</email>
@@ -12,10 +12,10 @@
 
  
  <entry>
-   <title>random java hack</title>
-   <link href="http://www.wroth.com/posts/random-java-hack.html"/>
+   <title>redirect and capture stdout</title>
+   <link href="http://www.wroth.com/posts/redirect-stdout.html"/>
    <updated>2017-04-23T01:28:54+00:00</updated>
-   <id>/posts/random-java-hack</id>
+   <id>/posts/redirect-stdout</id>
    <content type="html">&lt;h2 id=&quot;nothing-really-new-to-see-here&quot;&gt;Nothing really new to see here&lt;/h2&gt;
 
 &lt;p&gt;You can find versions of this all over the internet, I am just tired of not saving my own hacks and fixes in easy to find ways. This basically redirects stdout to something else, saves it, then puts stdout back. allowing me to capture output and fix something I shouldn’t have had to fix because the sample code for the class (not the Professor’s fault) is completely undocumented and wierd. It basically let me drop prefixes on a toy java database because the way you pulled tables created copies instead of clones.&lt;/p&gt;
@@ -56,7 +56,7 @@
 
 &lt;p&gt;I don’t know if it will work this time. I have tried before. But I think it may work this time since I am using githubs unlimited priviate .edu repos for all my research. I want to opensource a lot of that and in the process of writing it up and publishing it. We also have a group lab site that I/we are supposed to be maintaining that keeps getting pushed to the bottom of the to-do list. Maybe this will help with that too. It’s using a full CMS that is just overkill for what we use it for anyway.&lt;/p&gt;
 
-&lt;h3 id=&quot;i-am-going-to-just-leave-the-example-posts-in-place-for-now-in-the-theme&quot;&gt;I am going to just leave the example posts in place for now in the theme.&lt;/h3&gt;
+&lt;h3 id=&quot;some-code-examples-i-am-lazy-and-may-need-a-quick-refernece-later&quot;&gt;some code examples. I am lazy and may need a quick refernece later.&lt;/h3&gt;
 
 &lt;p&gt;Maybe its lazy, but I am not at all familiar with markdown. I am just going to leave them there for now. it may annoy other people but this is mostly for me.&lt;/p&gt;
 
