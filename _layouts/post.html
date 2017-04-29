@@ -1,55 +1,48 @@
----
-layout: default
----
+--- 
+layout: default 
+--- 
+<!-- Navi -->
+{% for cat in site.all_categories %}{% if page.category == cat[0] %}<a href="/">Home</a>&nbsp;>&nbsp;<a href="{{cat[2]}}">{{cat[1]}}</a>&nbsp;>&nbsp;text{% endif %}{% endfor %}
+<!-- Title -->
+<h2>{{ page.title }}</h2>
+{% if page.tags.size > 0%}<b>label：</b>{% for tag in page.tags %}{% if tag != "" %}<a href="/tags.html#{{ tag }}"><i>{{ tag }}</i></a>{% if forloop.index != page.tags.size %}, {% endif %}{% endif %}{% endfor %}{% endif %}
+<div class="post-date">
+	<span class="glyphicon glyphicon-time"></span>
+	{{ page.date | date:"%Y-%m-%d" }}
+</div>
+<br/>
 
-<article class="left-align" itemscope itemtype="http://schema.org/BlogPosting">
+<!-- content -->
+<div style="text-indent:2em;">
+{{ content }}
+</div>
 
-  <h2 class="my-mini-heading" itemprop="name headline">{{ page.title }}<br>
-    <span class="my-mini-heading-sub">
-    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {{ page.date | date: "%b %-d, %Y" }}
-    </time>
-    </span></h2>
+<br/>
+<b>links to this article: </b><a href="{{site.url}}{{page.url}}" title="{{page.name}}">{{site.url}}{{page.url}}</a>
 
-  <div class="my-text-body">
-    {{ content }}
-    {% assign category = site.categories | where: "slug", post.category %}
-    {% assign category = category[0] %}
-    {% if category %}
-    {% capture category_content %}<a class="label" href="{{ category.url }}">{{ category.name }}</a>{% endcapture %}
-    {% endif %}
-    <p id="post-meta">{{ category_content }}</p>
-
+<!-- next and previous -->
+<div style="margin-top:15px; margin-bottom:10px">
+  {%if page.previous%}
+  <span class="next">
+    On the article：
+    <a href="{{page.previous.url}}">
+      {{page.previous.title}}
+    </a>
+  </span>
+  {%endif%} 
+  {%if page.next%}
+  <div style="float:right">
+  <span class="prev" >
+    part 2:
+    <a href="{{page.next.url}}">
+      {{page.next.title}}
+    </a>
+  </span>
   </div>
-
-  <p class="center-align my-text-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    {% if page.author %}
-      <span itemprop="name">{{ site.name_badge }} {{ page.author }}</span>
-    {% endif %}
-    <br>
-    {% if page.tags %}
-      <i class="fa fa-tags" aria-hidden="true"></i>
-      {% for tag in page.tags %}
-        <span class="my-tag">{{ tag }}</span>&ensp;
-      {% endfor %}
-    {% endif %}
-  </p>
-
-  <div class="center-align">
-  {% if page.next.url %}
-    <a class="waves-effect waves-teal btn-flat btn-large my-thin-btn" href="{{ page.next.url | prepend: site.baseurl }}"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
-  {% else %}
-    <a class="waves-effect waves-teal btn-flat btn-large my-thin-btn disabled"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
-  {% endif %}
-  <a class="waves-effect waves-teal btn-flat btn-large" href="{{ site.baseurl }}/">{{ site.home_btn }}</a>
-  {% if page.previous.url %}
-    <a class="waves-effect waves-teal btn-flat btn-large my-thin-btn" href="{{ page.previous.url | prepend: site.baseurl }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-  {% else %}
-        <a class="waves-effect waves-teal btn-flat btn-large my-thin-btn disabled"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-  {% endif %}
-  </div>
-</article>
-
-{% if site.disqus_shortname %}
-{% include disqus.html %}
-{% endif %}
+  {%endif%}
+</div>
+<hr>
+<!-- Blog Comments -->
+<div class="media">
+  <!-- {% include comment.html %} -->
+</div>

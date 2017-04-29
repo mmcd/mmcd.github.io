@@ -1,0 +1,29 @@
+		<ul class="nav navbar-nav">
+			{% for cat in site.all_categories %}
+				<li>
+				  <a href="{{cat[2]}}"><span class="label">
+					{{cat[1]}}
+					</span>
+				  </a>
+				</li>
+			{% endfor %}
+{% if site.twitter_url %}
+				<li><a href="{{ site.twitter_url }}" class="icon fa-twitter" target="_blank"><span class="label">twitter</span></a></li>
+				{% endif %}
+				{% if site.googleplus_url %}
+				<li><a href="{{ site.googleplus_url }}" class="icon fa-google-plus" target="_blank"><span class="label">google+</span></a></li>
+				{% endif %}
+				{% if site.facebook_url %}
+				<li><a href="{{ site.facebook_url }}" class="icon fa-facebook" target="_blank"><span class="label">facebook</span></a></li>
+				{% endif %}
+				{% if site.github_url %}
+				<li><a href="{{ site.github_url }}" class="icon fa-github" target="_blank"><span class="label">github</span></a></li>
+				{% endif %}
+				{% if site.slack_url %}
+				<li><a href="{{ site.slack_url }}" class="icon fa-slack" target="_blank"><span class="label">slack</span></a></li>
+				{% endif %}
+				{% if site.linkedin_url %}
+				<li><a href="{{ site.linkedin_url }}" class="icon fa-linkedin" target="_blank"><span class="label">linkedin</span></a></li>
+				{% endif %}
+
+		</ul> 

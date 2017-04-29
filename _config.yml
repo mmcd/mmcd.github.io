@@ -1,43 +1,19 @@
-title: "Wroth - cranky... pretty much all the time these days"
-description: "My thinking is that maybe if I put things in one place I will actually be able to find them later."
-about: "I do research, allegedly, into geoinformatics, bioinformatics, high performance computing, machine learning... I also fumble around blindly with cluster hardware and robotics for fun."
-location: "Atlanta, GA, USA"
-email: mmcdermott2@student.gsu.edu
-baseurl: ""
-
-url: "http://www.wroth.com/" # replace by your site's url
-twitter_username: mjmcd
-github_username:  mmcd 
-author: "michael mcdermott"
-
-#mystuff
-collections:
-  categories:
-    output: true
-    permalink: /projects/:name/
-
-# google analytics tracking code, please change the value
-g_analytics: "UA-97870498-1"
-
-# add your disqus to enable comments
-disqus_shortname:
-
-# add your disqus to enable comments
-disqus_shortname:
-
-# language settings
-isolang: en
-close_btn: "Close"
-home_btn: "Home"
-projects_btn: "Projects"
-posts_btn: "Posts"
-imprint_btn: "Imprint"
-name_badge: "an article by"
-rss_badge: "Subscribe feed!"
-
-# build settings
 markdown: kramdown
 highlighter: rouge
+permalink: /posts/:title.html
+excerpt_separator: "<!-- more -->"
+
+github: mmcd
+author: "michael mcdermott"
+email: mmcdermott2#student.gsu.edu
+name: "michael mcdermott"
+url: http://www.wroth.com
+domain: www.wroth.com
+
+twitter_url: http://www.twitter.com/mjmcd
+github_url: http://www.github.com/mmcd
+linkedin_url: http://www.linkedin.com/in/mjmcdermott
+g_analytics: "UA-97870498-1"
 
 kramdown:
   input: GFM
@@ -51,25 +27,39 @@ kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     tab_width: 4
-    #css_class: 'syntax'
+    css_class: 'syntax'
     span:
       line_numbers: false
     block:
       line_numbers: true
       start_line: 1
 
-# third party gems
+all_categories: [
+["research", "Research","/posts/research.html"], 
+["c", "C99/Cuda/C++","/posts/cuda.html"],
+["java", "Java","/posts/java.html"],
+["python", "Python","/posts/python.html"],
+["cluster", "Cluster","/posts/cluster.html"], 
+["papers", "Papers","/posts/papers.html"], 
+["other", "Other","/posts/other.html"],
+# ["rants", "rants","posts/rants.html"]
+]
+
+paginate: 8
+paginate_path: "posts/page:num"
+timezone: America/EDT
+
+collections:
+  docs:
+    output: true
+
 gems:
   - jekyll-paginate
-  - jekyll-gist
   - jemoji
-
 whitelist:
   - jekyll-paginate
-  - jekyll-gist
   - jemoji
 
-# exclude files
 exclude:
   - LICENSE
   - README.md

@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>Wroth - cranky... pretty much all the time these days</title>
- <link href="http://www.wroth.com//atom.xml" rel="self"/>
- <link href="http://www.wroth.com/"/>
- <updated>2017-04-23T01:29:49-04:00</updated>
- <id>http://www.wroth.com/</id>
+ <title></title>
+ <link href="http://www.wroth.com/atom.xml" rel="self"/>
+ <link href="http://www.wroth.com"/>
+ <updated>2017-04-29T07:18:56+00:00</updated>
  <author>
    <name>michael mcdermott</name>
-   <email>mmcdermott2@student.gsu.edu</email>
+   <email>mmcdermott2#student.gsu.edu</email>
  </author>
 
  
  <entry>
    <title>random java hack</title>
-   <link href="http://www.wroth.com//snippets/2017/04/22/random-java-hack.html"/>
-   <updated>2017-04-22T21:28:54-04:00</updated>
-   <id>http://www.wroth.com//snippets/2017/04/22/random-java-hack</id>
+   <link href="http://www.wroth.com/posts/random-java-hack.html"/>
+   <updated>2017-04-23T01:28:54+00:00</updated>
+   <id>/posts/random-java-hack</id>
    <content type="html">&lt;h2 id=&quot;nothing-really-new-to-see-here&quot;&gt;Nothing really new to see here&lt;/h2&gt;
 
 &lt;p&gt;You can find versions of this all over the internet, I am just tired of not saving my own hacks and fixes in easy to find ways. This basically redirects stdout to something else, saves it, then puts stdout back. allowing me to capture output and fix something I shouldn’t have had to fix because the sample code for the class (not the Professor’s fault) is completely undocumented and wierd. It basically let me drop prefixes on a toy java database because the way you pulled tables created copies instead of clones.&lt;/p&gt;
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;syntax&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4
@@ -74,11 +73,19 @@
  </entry>
  
  <entry>
-   <title>So, maybe this will work this this attempt</title>
-   <link href="http://www.wroth.com//research/2017/04/21/and-so-it-begins.html"/>
-   <updated>2017-04-21T20:05:22-04:00</updated>
-   <id>http://www.wroth.com//research/2017/04/21/and-so-it-begins</id>
-   <content type="html">&lt;h2 id=&quot;so-i-have-this-theory-that-if-i-actually-make-an-effort-to-do-this-i-will-actually-make-a-sizeable-dent-in-it-and-accomplish-something-interesting-instead-of-talking-about-it-all-the-time&quot;&gt;So I have this theory that if I actually make an effort to do this I will actually make a sizeable dent in it and accomplish something interesting instead of talking about it all the time.&lt;/h2&gt;
+   <title>And So It Begins</title>
+   <link href="http://www.wroth.com/posts/and-so-it-begins.html"/>
+   <updated>2017-04-21T00:00:00+00:00</updated>
+   <id>/posts/and-so-it-begins</id>
+   <content type="html">&lt;p&gt;yout: post
+title: “So, maybe this will work this this attempt”
+date: 2017-04-21 20:05:22 EDT
+category: research
+tags: [first post, thoughts, self motivation]
+author: “michael”
+—&lt;/p&gt;
+
+&lt;h2 id=&quot;so-i-have-this-theory-that-if-i-actually-make-an-effort-to-do-this-i-will-actually-make-a-sizeable-dent-in-it-and-accomplish-something-interesting-instead-of-talking-about-it-all-the-time&quot;&gt;So I have this theory that if I actually make an effort to do this I will actually make a sizeable dent in it and accomplish something interesting instead of talking about it all the time.&lt;/h2&gt;
 
 &lt;p&gt;I don’t know if it will work this time. I have tried before. But I think it may work this time since I am using githubs unlimited priviate .edu repos for all my research. I want to opensource a lot of that and in the process of writing it up and publishing it. We also have a group lab site that I/we are supposed to be maintaining that keeps getting pushed to the bottom of the to-do list. Maybe this will help with that too. It’s using a full CMS that is just overkill for what we use it for anyway.&lt;/p&gt;
 
@@ -87,7 +94,7 @@
 &lt;p&gt;Maybe its lazy, but I am not at all familiar with markdown. I am just going to leave them there for now. it may annoy other people but this is mostly for me.&lt;/p&gt;
 
 &lt;h4 id=&quot;random-syntax-highlighting-test&quot;&gt;random syntax highlighting test&lt;/h4&gt;
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;syntax&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;notice the blank line before this function?&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -96,14 +103,14 @@
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;syntax&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
 	&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blah&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;syntax&quot;&gt;&lt;table style=&quot;border-spacing: 0&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot; style=&quot;text-align: right&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
 2
 3
 4&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -113,108 +120,6 @@
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Use my jekyll theme</title>
-   <link href="http://www.wroth.com//2016/09/19/use-my-jekyll-theme.html"/>
-   <updated>2016-09-19T16:10:00-04:00</updated>
-   <id>http://www.wroth.com//2016/09/19/use-my-jekyll-theme</id>
-   <content type="html">&lt;h2 id=&quot;hints&quot;&gt;Hints&lt;/h2&gt;
-
-&lt;p&gt;If you want to use my jekyll theme, follow the instructions and host it yourself. Easily setup as a Github page.&lt;/p&gt;
-
-&lt;p&gt;To add pages (for example a portfolio, an extra about page, and so on), you need to link them to the &lt;code class=&quot;highlighter-rouge&quot;&gt;index.html&lt;/code&gt; manually. Required to configure in this dimensions is a bit of html and jekyll know-how. Reading the &lt;a href=&quot;http://jekyllrb.com/docs/pages/&quot;&gt;Jekyll docs&lt;/a&gt; could help. All other things are easy to edit and configure, even without much jekyll experience.&lt;/p&gt;
-
-&lt;h4 id=&quot;theme-features&quot;&gt;Theme features&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;Projects showcase&lt;/li&gt;
-  &lt;li&gt;RSS and ATOM feed&lt;/li&gt;
-  &lt;li&gt;Blogpost pagination&lt;/li&gt;
-  &lt;li&gt;SEO meta tags, &lt;em&gt;schema.org&lt;/em&gt; structured data&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://dev.twitter.com/cards/getting-started&quot;&gt;twitter&lt;/a&gt; cards&lt;/li&gt;
-  &lt;li&gt;made with MaterializeCSS&lt;/li&gt;
-  &lt;li&gt;Disqus comments&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
-
-&lt;h3 id=&quot;1-get-the-sources&quot;&gt;1. Get the sources&lt;/h3&gt;
-
-&lt;h4 id=&quot;11-clone&quot;&gt;1.1 Clone&lt;/h4&gt;
-
-&lt;p&gt;Clone the repository from github:&lt;br /&gt;
-&lt;a href=&quot;https://github.com/lukas-h/material-theme.git&quot;&gt;https://github.com/lukas-h/material-theme.git&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;12-or-download&quot;&gt;1.2 or download&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/lukas-h/material-theme/archive/gh-pages.zip&quot;&gt;https://github.com/lukas-h/material-theme/archive/gh-pages.zip&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2-configure&quot;&gt;2. Configure&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Replace all the configuration in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;_data/projects.yml&lt;/code&gt; by your own data. Change the name, email address, configure your your language settings.&lt;br /&gt;
-And most important: change the site’s URL! Optionally add your google analytics ID.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Put your address and legal info into &lt;code class=&quot;highlighter-rouge&quot;&gt;imprint.html&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Change the icon &lt;code class=&quot;highlighter-rouge&quot;&gt;images/favicon.png&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Replace the domain name in the &lt;code class=&quot;highlighter-rouge&quot;&gt;robots.txt&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Don’t forget the &lt;code class=&quot;highlighter-rouge&quot;&gt;README.md&lt;/code&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;3-start-writing-posts&quot;&gt;3. Start writing posts&lt;/h3&gt;
-&lt;p&gt;Replace the existing example post and then add your own!&lt;br /&gt;
-Have a look at the &lt;a href=&quot;http://jekyllrb.com/docs/posts/&quot;&gt;Jekyll docs&lt;/a&gt;
-about how to write blog posts.&lt;br /&gt;
-To add tags to your posts, look into the example, you’ll see that there is
-a line starting with &lt;code class=&quot;highlighter-rouge&quot;&gt;tags:&lt;/code&gt;. Add your keywords there.&lt;/p&gt;
-
-&lt;h3 id=&quot;4-youre-done&quot;&gt;4. You’re done&lt;/h3&gt;
-&lt;p&gt;Take a stop on the Github project page. Feel free to give a star and share it with others!&lt;br /&gt;
-You have questions, feedback or something to improve, mail me or open issues on github. Contributions are always welcome.&lt;br /&gt;
-Thanks to them who have already &lt;a href=&quot;https://github.com/lukas-h/material-theme/graphs/contributors&quot;&gt;helped&lt;/a&gt; to improve, especially &lt;a href=&quot;https://github.com/varundey&quot;&gt;@varundey&lt;/a&gt;!&lt;br /&gt;
-See the &lt;a href=&quot;https://github.com/lukas-h/material-theme&quot;&gt;Github Project&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Markdown flavour</title>
-   <link href="http://www.wroth.com//2016/09/19/welcome.html"/>
-   <updated>2016-09-18T18:00:00-04:00</updated>
-   <id>http://www.wroth.com//2016/09/19/welcome</id>
-   <content type="html">&lt;p&gt;I have some text.&lt;/p&gt;
-
-&lt;p&gt;I want some &lt;em&gt;italics&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;I want some &lt;strong&gt;bold&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;this-is-heading-1&quot;&gt;this is heading 1&lt;/h1&gt;
-
-&lt;h2 id=&quot;this-is-heading-2&quot;&gt;this is heading 2&lt;/h2&gt;
-
-&lt;h3 id=&quot;this-is-heading-3&quot;&gt;this is heading 3&lt;/h3&gt;
-
-&lt;p&gt;you want a list?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;first&lt;/li&gt;
-  &lt;li&gt;second&lt;/li&gt;
-  &lt;li&gt;third&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;you want an ordered list?&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;whatever&lt;/li&gt;
-  &lt;li&gt;whatever&lt;/li&gt;
-  &lt;li&gt;whatever&lt;/li&gt;
-&lt;/ol&gt;
 </content>
  </entry>
  
