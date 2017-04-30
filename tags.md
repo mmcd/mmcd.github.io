@@ -117,7 +117,7 @@ This doesn't work yet, I don't know why. It's javascript. Javascript is terrible
             return ~~(Math.random() * 3 - 1) * 30;
         })
         .spiral('archimedean')
-        .font('Microsoft Yahei')
+        .font('Droid Sans Mono')
         .fontSize(function(d) {
             return d.size;
         })

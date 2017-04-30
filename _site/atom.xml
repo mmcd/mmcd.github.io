@@ -4,12 +4,30 @@
  <title></title>
  <link href="http://www.wroth.com/atom.xml" rel="self"/>
  <link href="http://www.wroth.com"/>
- <updated>2017-04-29T08:11:58+00:00</updated>
+ <updated>2017-04-30T05:29:57+00:00</updated>
  <author>
    <name>michael mcdermott</name>
    <email>mmcdermott2#student.gsu.edu</email>
  </author>
 
+ 
+ <entry>
+   <title>How to read research papers</title>
+   <link href="http://www.wroth.com/posts/how-to-read-papers.html"/>
+   <updated>2017-04-30T05:25:22+00:00</updated>
+   <id>/posts/how-to-read-papers</id>
+   <content type="html">&lt;h2 id=&quot;how-to-read-papers&quot;&gt;How to read papers&lt;/h2&gt;
+
+&lt;p&gt;This is not something I wrote, but is something a good friend of mine linked on social media.
+It is probably one of the most useful skills a researcher can develop. I have, over time, 
+managed to arrive at a very similar place as the original author whos paper you can find here:
+&lt;a href=&quot;http://blizzard.cs.uwaterloo.ca/keshav/home/Papers/data/07/paper-reading.pdf&quot;&gt;Link to original Paper by S. Keshev&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The paper is well laid out, easy to follow and makes a rediculous amount of sense. It is also short and to the point. Follow the steps, there are like… three? Don’t skip any. Repeatition… repetition… repetition…&lt;/p&gt;
+
+&lt;p&gt;I am planning on revising my own technique a bit after reading this as there is always room for improvement.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>redirect and capture stdout</title>

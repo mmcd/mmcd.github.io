@@ -4,14 +4,14 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content=" - michael mcdermott - Author:michael mcdermott"/>
-    <title> - michael mcdermott</title>
+    <meta name="description" content="How to read research papers - michael mcdermott - Author:michael mcdermott"/> 
+	<meta name="keywords" content="thoughts,self motivation,misc,papers,reading"/>
+    <title>How to read research papers - michael mcdermott</title>
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Custom CSS -->
     <link href="/css/blog.css" rel="stylesheet"/>
-        <link href="/css/syntax.css" rel="stylesheet">
-
+    <link href="/css/syntax.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
     queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file://
@@ -46,7 +46,7 @@
             </span>
           </button>
           <a class="navbar-brand" href="/">
-            <span class="label">Home</span>
+            Home
           </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -126,18 +126,19 @@
       <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8">
-          <!-- Loop output paged posts -->
-
-<h2>
-  <a href="/posts/how-to-read-papers.html">
-    How to read research papers
-  </a> 
-  <div class="post-date">
+          <!-- Navi -->
+<a href="/">Home</a>&nbsp;>&nbsp;<a href="/posts/papers.html">Papers</a>&nbsp;>&nbsp;text
+<!-- Title -->
+<h2>How to read research papers</h2>
+<b>label：</b><a href="/tags.html#thoughts"><i>thoughts</i></a>, <a href="/tags.html#self motivation"><i>self motivation</i></a>, <a href="/tags.html#misc"><i>misc</i></a>, <a href="/tags.html#papers"><i>papers</i></a>, <a href="/tags.html#reading"><i>reading</i></a>
+<div class="post-date">
 	<span class="glyphicon glyphicon-time"></span>
 	2017-04-30
-  </div>
-</h2>
-<hr>
+</div>
+<br/>
+
+<!-- content -->
+<div style="text-indent:2em;">
 <h2 id="how-to-read-papers">How to read papers</h2>
 
 <p>This is not something I wrote, but is something a good friend of mine linked on social media.
@@ -149,93 +150,28 @@ managed to arrive at a very similar place as the original author whos paper you 
 
 <p>I am planning on revising my own technique a bit after reading this as there is always room for improvement.</p>
 
-	<p><h3><a href="/posts/how-to-read-papers.html">full text &raquo;</a></h3></p>
-<hr>
+</div>
 
-<h2>
-  <a href="/posts/redirect-stdout.html">
-    redirect and capture stdout
-  </a> 
-  <div class="post-date">
-	<span class="glyphicon glyphicon-time"></span>
-	2017-04-23
-  </div>
-</h2>
-<hr>
-<h2 id="nothing-really-new-to-see-here">Nothing really new to see here</h2>
+<br/>
+<b>links to this article: </b><a href="http://www.wroth.com/posts/how-to-read-papers.html" title="">http://www.wroth.com/posts/how-to-read-papers.html</a>
 
-<p>You can find versions of this all over the internet, I am just tired of not saving my own hacks and fixes in easy to find ways. This basically redirects stdout to something else, saves it, then puts stdout back. allowing me to capture output and fix something I shouldn’t have had to fix because the sample code for the class (not the Professor’s fault) is completely undocumented and wierd. It basically let me drop prefixes on a toy java database because the way you pulled tables created copies instead of clones.</p>
-<pre><code class="language-java">        ByteArrayOutputStream bstream = new ByteArrayOutputStream();
-        PrintStream pstream = new PrintStream(bstream);
-        PrintStream stock = System.out;
-        System.setOut(pstream);
-        dbengine.displaySchema();
-        System.out.flush();
-        System.setOut(stock);
-        String HACK = "";
-        try {
-            HACK = new String(bstream.toByteArray(), "UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            System.out.println(e);
-        }
-        // System.out.println(HACK);
-        ArrayList&lt;String&gt; prefix = new ArrayList&lt;String&gt;();
-        String[] tmp = HACK.split("\\n");
-        for(String t : tmp) {
-            if(t.contains("(")) 
-                prefix.add(t.split("\\(")[0]);
-        }
-        for(String p : prefix) {
-            Relation r = dbengine.getRelation(p);
-            r.prefixColumnNames(p);
-        }
-</code></pre>
-
-	<p><h3><a href="/posts/redirect-stdout.html">full text &raquo;</a></h3></p>
-<hr>
-
-<h2>
-  <a href="/posts/and-so-it-begins.html">
-    So, maybe this will work this this attempt
-  </a> 
-  <div class="post-date">
-	<span class="glyphicon glyphicon-time"></span>
-	2017-04-22
-  </div>
-</h2>
-<hr>
-<h2 id="so-i-have-this-theory-that-if-i-actually-make-an-effort-to-do-this-i-will-actually-make-a-sizeable-dent-in-it-and-accomplish-something-interesting-instead-of-talking-about-it-all-the-time">So I have this theory that if I actually make an effort to do this I will actually make a sizeable dent in it and accomplish something interesting instead of talking about it all the time.</h2>
-
-<p>I don’t know if it will work this time. I have tried before. But I think it may work this time since I am using githubs unlimited priviate .edu repos for all my research. I want to opensource a lot of that and in the process of writing it up and publishing it. We also have a group lab site that I/we are supposed to be maintaining that keeps getting pushed to the bottom of the to-do list. Maybe this will help with that too. It’s using a full CMS that is just overkill for what we use it for anyway.</p>
-
-<h3 id="some-code-examples-i-am-lazy-and-may-need-a-quick-refernece-later">some code examples. I am lazy and may need a quick refernece later.</h3>
-
-<p>Maybe its lazy, but I am not at all familiar with markdown. I am just going to leave them there for now. it may annoy other people but this is mostly for me.</p>
-
-<h4 id="random-syntax-highlighting-test">random syntax highlighting test</h4>
-<pre><code class="language-javascript">function test() {
-  console.log("notice the blank line before this function?");
-}
-</code></pre>
-
-<pre><code class="language-python">def main():
-	print(blah)
-</code></pre>
-
-<pre><code class="language-c">int main(int arc, char**argv) {
-	prinf("blah\n");
-	exit(0);
-	}
-</code></pre>
-
-	<p><h3><a href="/posts/and-so-it-begins.html">full text &raquo;</a></h3></p>
-<hr>
-
-
-<!-- Pager indicator -->
-<ul class="pager">
+<!-- next and previous -->
+<div style="margin-top:15px; margin-bottom:10px">
+  
+  <span class="next">
+    On the article：
+    <a href="/posts/redirect-stdout.html">
+      redirect and capture stdout
+    </a>
+  </span>
    
-</ul>
+  
+</div>
+<hr>
+<!-- Blog Comments -->
+<div class="media">
+  <!-- 请修改_includes/comment.html添加评论代码。 -->
+</div>
         </div>
         <!-- Blog Sidebar Widgets Column -->
         <div class="col-md-4">
@@ -335,20 +271,6 @@ managed to arrive at a very similar place as the original author whos paper you 
                 </ul>
               </div> 
 			</div>
-          </div>		  
-		  <!-- Blog Links Well -->
-          <div class="well">
-            <h4>
-              Links
-            </h4>
-                        <ul class="list-unstyled">
-              <li>
-                <a href="http://www.panxw.com"><!-- 请保留友情链接，please remain as friend link-->
-                  Pan Xuewen's blog (theme author)
-                </a>
-              </li>		  
-            </ul>
- 
           </div>
         </div>
       </div>
@@ -381,4 +303,5 @@ managed to arrive at a very similar place as the original author whos paper you 
     </div>
     <!-- /.container -->
   </body>
+
 </html>
