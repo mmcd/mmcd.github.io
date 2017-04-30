@@ -14,6 +14,6 @@ It is probably one of the most useful skills a researcher can develop. I have, o
 managed to arrive at a very similar place as the original author whos paper you can find here:
 [Link to original Paper by S. Keshev](http://blizzard.cs.uwaterloo.ca/keshav/home/Papers/data/07/paper-reading.pdf)
 
-The paper is well laid out, easy to follow and makes a rediculous amount of sense. It is also short and to the point. Follow the steps, there are like... three? Don't skip any. Repeatition... repetition... repetition...
+The paper is well laid out, easy to follow and makes a rediculous amount of sense. It is also short and to the point. Follow the steps, there are like... three? Don't skip any. Repeatition... repetition... repetition... eventually it will just be habit.
 
 I am planning on revising my own technique a bit after reading this as there is always room for improvement.
