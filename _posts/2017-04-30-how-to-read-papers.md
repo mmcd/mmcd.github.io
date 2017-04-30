@@ -9,7 +9,7 @@ author: "michael"
 
 ## How to read papers
 
-This is not something I wrote, but is something a good friend of mine linked on social media.
+This is not something I wrote, but is something a good friend of mine linked on social media (he also did not write it, but stumbled across it recently).
 It is probably one of the most useful skills a researcher can develop. I have, over time, 
 managed to arrive at a very similar place as the original author whos paper you can find here:
 [Link to original Paper by S. Keshev](http://blizzard.cs.uwaterloo.ca/keshav/home/Papers/data/07/paper-reading.pdf)
