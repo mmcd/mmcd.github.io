@@ -7,7 +7,7 @@ tags: [cassandra, spark, gpgpu, cluster, research]
 author: "michael"
 ---
 
-This is fairly non-trivial to figure out, but in hindsight seems easy now.
+This was fairly non-trivial to figure out, but in hindsight seems easy now. I need to write this up better, this is mostly just running notes for myself right now.
 
 The big things:
 * I opted for Pyspark because python
