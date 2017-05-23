@@ -7,8 +7,6 @@ tags: [cassandra, spark, gpgpu, cluster, research]
 author: "michael"
 ---
 
-## Getting Cassandra, Spark and Cuda to all talk to each other Correctly.
-
 This is fairly non-trivial to figure out, but in hindsight seems easy now.
 
 The big things:
@@ -18,12 +16,12 @@ The big things:
 
 Leaning on python made everything a bit easier I think. I have gotten Hadoop and Cuda to talk to each other quite easily but its a chore getting all the nodes working together and making sure every node is using the right version of Cuda and Java and the JCuda packages. Python is a ton easier in that respect. Plus there is a lot of other little things that get brought to the table down the line that I want to look at such as machine learning, embedding graph databases in cassandra, etc. python should just make that a bunch easier. I am willing to take the performance hit for the interoperability.
 
-#Pycuda notes
+# Pycuda notes
 * Everything you pass to your kernel has to be some sort of numpy construct. EVERYTHING. I spent about an hour wondering why things were not working because I was passing a standard python int.
 
 * using arrays of structs is both easy and a total pain, I still do not understand the whole argument between SOA and AOS. pycuda makes it almost painfully hard and obtuse to use arrays of structs compared to just passing multiple arrays of standard types.
 
-#Pyspark notes
+# Pyspark notes
 * You want to get the most out of your gpgpu kernels, so you want to dump as much on the gpu as possible in order to
 maximisze the parallelism as you can. This means you somehow have to pass a chunk of a dataframe or rdd to the GPU at once. Thankfully if you can figure out how to get the right sized partition then this isn't much of a problem. You can solve this by changing the executor memory, sort of, in the spark configs.
 
