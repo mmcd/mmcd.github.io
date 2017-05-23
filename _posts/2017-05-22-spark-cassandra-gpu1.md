@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Getting Cassandra, Spark and Cuda to be interoperable for some Research Projects"
+title: "Getting Cassandra, Spark and Cuda to be interoperable"
 date: 2017-05-22 20:54:22 EDT
 category: [cluster, research]
 tags: [cassandra, spark, gpgpu, cluster, research]
