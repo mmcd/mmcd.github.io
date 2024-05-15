@@ -4,12 +4,14 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content=" - michael mcdermott - Author:michael mcdermott"/>
-    <title>Section：Other - michael mcdermott</title>
+    <meta name="description" content="Random wierd Cassandra issue - michael mcdermott - Author:michael mcdermott"/> 
+	<meta name="keywords" content="cluster,io,programming,hacks,datetime"/>
+    <title>Random wierd Cassandra issue - michael mcdermott</title>
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Custom CSS -->
     <link href="/css/blog.css" rel="stylesheet"/>
+    <link href="/css/syntax.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
     queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file://
@@ -124,22 +126,60 @@
       <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8">
-			<!-- Navi -->
-			<a href="/">Home</a>&nbsp;>&nbsp;<a href="/posts/other.html">Other</a>&nbsp;>&nbsp;List
-			<!-- List -->
-			<ul class="list-unstyled">
-			
-			  
-			  
-				
-				<h2>2017</h2> 
-			  
-			  <li>
-				<h4><span>2017-04-22</span>&raquo;
-				<a href="/posts/and-so-it-begins.html" title="So, maybe this will work this this attempt">So, maybe this will work this this attempt</a></h4>
-			  </li> 
-			
-			</ul>
+          <!-- Navi -->
+<a href="/">Home</a>&nbsp;>&nbsp;<a href="/posts/cluster.html">Cluster</a>&nbsp;>&nbsp;text
+<!-- Title -->
+<h2>Random wierd Cassandra issue</h2>
+<b>label：</b><a href="/tags.html#cluster"><i>cluster</i></a>, <a href="/tags.html#io"><i>io</i></a>, <a href="/tags.html#programming"><i>programming</i></a>, <a href="/tags.html#hacks"><i>hacks</i></a>, <a href="/tags.html#datetime"><i>datetime</i></a>
+<div class="post-date">
+	<span class="glyphicon glyphicon-time"></span>
+	2017-05-13
+</div>
+<br/>
+
+<!-- content -->
+<div style="text-indent:2em;">
+<h3 id="so-this-happened-today">So this happened today</h3>
+
+<p>I have been working with Cassandra recently and I enjoy the idea of it. I think it has potential even if I do need to do a lot of tuning for our cluster. Right now it is set up to run on five nodes out of a dedicated raid array on each node we are using for testing such things. It has a lot of space and nobody else is using it so it should be really nice.</p>
+
+<p>Initially I set it up to use the normal private cat5 network just to run some tests to see if it would work, etc, could be interoperable with Apache Spark in our setup that sort of thing. Everything was, if a bit slower than expected. So I stopped it, moved everything to our infiniband network, and started everything back up and thats when I began to notice some really bizarre behavior. One node out of the five, at startup, could see all the other nodes but then would soon stop seeing one specific node. This happened consistently and nothing I could find seemed to address the issue. I checked and rechecked the setup and everything was fine. My feeling is that it was like this before which probably contributed to it being slow (it feels faster now that I have fixed it).</p>
+
+<p>I don’t know why yet, but the solution was really REALLY strange. All the nodes had system times that were relatively close to each other with the exception of the one that was randomly being reported as unreachable which was about a half hour behind the others. The wierd thing is that only one node reported it as unreachable. The fix was just to set the slow node’s system time ahead to more closely match the other nodes. Since then the problem has not resurfaced. Very VERY strange, and it wasted most of my morning.</p>
+
+<p>(Yes I know they should be running ntp, its on the to-do list. I don’t know why they aren’t already running it. The entire cluster is due for a massive system overhaul where we wipe all the nodes and do a full system reinstall so I will address it then.)</p>
+
+</div>
+
+<br/>
+<b>links to this article: </b><a href="http://localhost:4000/posts/cassandra-silliness.html" title="">http://localhost:4000/posts/cassandra-silliness.html</a>
+
+<!-- next and previous -->
+<div style="margin-top:15px; margin-bottom:10px">
+  
+  <span class="next">
+    On the article：
+    <a href="/posts/how-to-read-papers.html">
+      How to read research papers
+    </a>
+  </span>
+   
+  
+  <div style="float:right">
+  <span class="prev" >
+    part 2:
+    <a href="/posts/spark-cassandra-gpu1.html">
+      Getting Cassandra, Spark and Cuda to be interoperable
+    </a>
+  </span>
+  </div>
+  
+</div>
+<hr>
+<!-- Blog Comments -->
+<div class="media">
+  <!-- 请修改_includes/comment.html添加评论代码。 -->
+</div>
         </div>
         <!-- Blog Sidebar Widgets Column -->
         <div class="col-md-4">

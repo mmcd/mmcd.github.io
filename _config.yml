@@ -53,7 +53,7 @@ collections:
   docs:
     output: true
 
-gems:
+plugins:
   - jekyll-paginate
   - jemoji
 whitelist:
@@ -61,5 +61,6 @@ whitelist:
   - jemoji
 
 exclude:
+  - vendor
   - LICENSE
   - README.md

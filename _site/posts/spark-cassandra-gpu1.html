@@ -4,12 +4,14 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content=" - michael mcdermott - Author:michael mcdermott"/>
-    <title>Section：Other - michael mcdermott</title>
+    <meta name="description" content="Getting Cassandra, Spark and Cuda to be interoperable - michael mcdermott - Author:michael mcdermott"/> 
+	<meta name="keywords" content="cassandra,spark,gpgpu,cluster,research"/>
+    <title>Getting Cassandra, Spark and Cuda to be interoperable - michael mcdermott</title>
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Custom CSS -->
     <link href="/css/blog.css" rel="stylesheet"/>
+    <link href="/css/syntax.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
     queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file://
@@ -124,22 +126,91 @@
       <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8">
-			<!-- Navi -->
-			<a href="/">Home</a>&nbsp;>&nbsp;<a href="/posts/other.html">Other</a>&nbsp;>&nbsp;List
-			<!-- List -->
-			<ul class="list-unstyled">
-			
-			  
-			  
-				
-				<h2>2017</h2> 
-			  
-			  <li>
-				<h4><span>2017-04-22</span>&raquo;
-				<a href="/posts/and-so-it-begins.html" title="So, maybe this will work this this attempt">So, maybe this will work this this attempt</a></h4>
-			  </li> 
-			
-			</ul>
+          <!-- Navi -->
+
+<!-- Title -->
+<h2>Getting Cassandra, Spark and Cuda to be interoperable</h2>
+<b>label：</b><a href="/tags.html#cassandra"><i>cassandra</i></a>, <a href="/tags.html#spark"><i>spark</i></a>, <a href="/tags.html#gpgpu"><i>gpgpu</i></a>, <a href="/tags.html#cluster"><i>cluster</i></a>, <a href="/tags.html#research"><i>research</i></a>
+<div class="post-date">
+	<span class="glyphicon glyphicon-time"></span>
+	2017-05-23
+</div>
+<br/>
+
+<!-- content -->
+<div style="text-indent:2em;">
+<p>This was fairly non-trivial to figure out, but in hindsight seems easy now. I need to write this up better, this is mostly just running notes for myself right now.</p>
+
+<p>The big things:</p>
+<ul>
+  <li>I opted for Pyspark because python</li>
+  <li>I opted for Pycuda because pycuda</li>
+  <li>I opted for the cassandra driver in python because… see the pattern?</li>
+</ul>
+
+<p>Leaning on python made everything a bit easier I think. I have gotten Hadoop and Cuda to talk to each other quite easily but its a chore getting all the nodes working together and making sure every node is using the right version of Cuda and Java and the JCuda packages. Python is a ton easier in that respect. Plus there is a lot of other little things that get brought to the table down the line that I want to look at such as machine learning, embedding graph databases in cassandra, etc. python should just make that a bunch easier. I am willing to take the performance hit for the interoperability.</p>
+
+<h1 id="pycuda-notes">Pycuda notes</h1>
+<ul>
+  <li>
+    <p>Everything you pass to your kernel has to be some sort of numpy construct. EVERYTHING. I spent about an hour wondering why things were not working because I was passing a standard python int.</p>
+  </li>
+  <li>
+    <p>using arrays of structs is both easy and a total pain, I still do not understand the whole argument between SOA and AOS. pycuda makes it almost painfully hard and obtuse to use arrays of structs compared to just passing multiple arrays of standard types.</p>
+  </li>
+</ul>
+
+<h1 id="pyspark-notes">Pyspark notes</h1>
+<ul>
+  <li>
+    <p>You want to get the most out of your gpgpu kernels, so you want to dump as much on the gpu as possible in order to
+maximisze the parallelism as you can. This means you somehow have to pass a chunk of a dataframe or rdd to the GPU at once. Thankfully if you can figure out how to get the right sized partition then this isn’t much of a problem. You can solve this by changing the executor memory, sort of, in the spark configs.</p>
+  </li>
+  <li>
+    <p>you can also manually break the partitions up. I didn’t see much benefit to this though as it didn’t really seem to do much for me,.</p>
+  </li>
+  <li>
+    <p>you want to be really careful work multiple workers per node. gpus are resource starved and you can run out of memory if you arent careful</p>
+  </li>
+  <li>
+    <p>I found foreachPartition() helpful here. it doesn’t return anything itself and you cannot write back to the rdd since its immutable but since those weren’t really problems for me… What was useful was writing directly inside that loop back to cassandra with batched writes. I wanted, at least at this stage to write back out to cassandra. It slows things down but also means I don’t ever have to compute certain things ever again.</p>
+  </li>
+</ul>
+
+<h1 id="cassandra-notes">Cassandra notes</h1>
+<ul>
+  <li>there isn’t much to say here, you are going to grab things out of cassandra based on cassandra’s partitions as dataframes.</li>
+</ul>
+
+<h2 id="model-overview">Model overview</h2>
+
+<ul>
+  <li>Pyspark-&gt;Get partition from cassandra-&gt;foreach partition:
+**(launch kernel-&gt;compute on partition-&gt;writeback to cassandra)</li>
+</ul>
+
+</div>
+
+<br/>
+<b>links to this article: </b><a href="http://localhost:4000/posts/spark-cassandra-gpu1.html" title="">http://localhost:4000/posts/spark-cassandra-gpu1.html</a>
+
+<!-- next and previous -->
+<div style="margin-top:15px; margin-bottom:10px">
+  
+  <span class="next">
+    On the article：
+    <a href="/posts/cassandra-silliness.html">
+      Random wierd Cassandra issue
+    </a>
+  </span>
+   
+  
+</div>
+<hr>
+<!-- Blog Comments -->
+<div class="media">
+  <!-- 请修改_includes/comment.html添加评论代码。 -->
+</div>
         </div>
         <!-- Blog Sidebar Widgets Column -->
         <div class="col-md-4">

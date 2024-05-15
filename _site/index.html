@@ -129,6 +129,92 @@
           <!-- Loop output paged posts -->
 
 <h2>
+  <a href="/posts/spark-cassandra-gpu1.html">
+    Getting Cassandra, Spark and Cuda to be interoperable
+  </a> 
+  <div class="post-date">
+	<span class="glyphicon glyphicon-time"></span>
+	2017-05-23
+  </div>
+</h2>
+<hr>
+<p>This was fairly non-trivial to figure out, but in hindsight seems easy now. I need to write this up better, this is mostly just running notes for myself right now.</p>
+
+<p>The big things:</p>
+<ul>
+  <li>I opted for Pyspark because python</li>
+  <li>I opted for Pycuda because pycuda</li>
+  <li>I opted for the cassandra driver in python because… see the pattern?</li>
+</ul>
+
+<p>Leaning on python made everything a bit easier I think. I have gotten Hadoop and Cuda to talk to each other quite easily but its a chore getting all the nodes working together and making sure every node is using the right version of Cuda and Java and the JCuda packages. Python is a ton easier in that respect. Plus there is a lot of other little things that get brought to the table down the line that I want to look at such as machine learning, embedding graph databases in cassandra, etc. python should just make that a bunch easier. I am willing to take the performance hit for the interoperability.</p>
+
+<h1 id="pycuda-notes">Pycuda notes</h1>
+<ul>
+  <li>
+    <p>Everything you pass to your kernel has to be some sort of numpy construct. EVERYTHING. I spent about an hour wondering why things were not working because I was passing a standard python int.</p>
+  </li>
+  <li>
+    <p>using arrays of structs is both easy and a total pain, I still do not understand the whole argument between SOA and AOS. pycuda makes it almost painfully hard and obtuse to use arrays of structs compared to just passing multiple arrays of standard types.</p>
+  </li>
+</ul>
+
+<h1 id="pyspark-notes">Pyspark notes</h1>
+<ul>
+  <li>
+    <p>You want to get the most out of your gpgpu kernels, so you want to dump as much on the gpu as possible in order to
+maximisze the parallelism as you can. This means you somehow have to pass a chunk of a dataframe or rdd to the GPU at once. Thankfully if you can figure out how to get the right sized partition then this isn’t much of a problem. You can solve this by changing the executor memory, sort of, in the spark configs.</p>
+  </li>
+  <li>
+    <p>you can also manually break the partitions up. I didn’t see much benefit to this though as it didn’t really seem to do much for me,.</p>
+  </li>
+  <li>
+    <p>you want to be really careful work multiple workers per node. gpus are resource starved and you can run out of memory if you arent careful</p>
+  </li>
+  <li>
+    <p>I found foreachPartition() helpful here. it doesn’t return anything itself and you cannot write back to the rdd since its immutable but since those weren’t really problems for me… What was useful was writing directly inside that loop back to cassandra with batched writes. I wanted, at least at this stage to write back out to cassandra. It slows things down but also means I don’t ever have to compute certain things ever again.</p>
+  </li>
+</ul>
+
+<h1 id="cassandra-notes">Cassandra notes</h1>
+<ul>
+  <li>there isn’t much to say here, you are going to grab things out of cassandra based on cassandra’s partitions as dataframes.</li>
+</ul>
+
+<h2 id="model-overview">Model overview</h2>
+
+<ul>
+  <li>Pyspark-&gt;Get partition from cassandra-&gt;foreach partition:
+**(launch kernel-&gt;compute on partition-&gt;writeback to cassandra)</li>
+</ul>
+
+	<p><h3><a href="/posts/spark-cassandra-gpu1.html">full text &raquo;</a></h3></p>
+<hr>
+
+<h2>
+  <a href="/posts/cassandra-silliness.html">
+    Random wierd Cassandra issue
+  </a> 
+  <div class="post-date">
+	<span class="glyphicon glyphicon-time"></span>
+	2017-05-13
+  </div>
+</h2>
+<hr>
+<h3 id="so-this-happened-today">So this happened today</h3>
+
+<p>I have been working with Cassandra recently and I enjoy the idea of it. I think it has potential even if I do need to do a lot of tuning for our cluster. Right now it is set up to run on five nodes out of a dedicated raid array on each node we are using for testing such things. It has a lot of space and nobody else is using it so it should be really nice.</p>
+
+<p>Initially I set it up to use the normal private cat5 network just to run some tests to see if it would work, etc, could be interoperable with Apache Spark in our setup that sort of thing. Everything was, if a bit slower than expected. So I stopped it, moved everything to our infiniband network, and started everything back up and thats when I began to notice some really bizarre behavior. One node out of the five, at startup, could see all the other nodes but then would soon stop seeing one specific node. This happened consistently and nothing I could find seemed to address the issue. I checked and rechecked the setup and everything was fine. My feeling is that it was like this before which probably contributed to it being slow (it feels faster now that I have fixed it).</p>
+
+<p>I don’t know why yet, but the solution was really REALLY strange. All the nodes had system times that were relatively close to each other with the exception of the one that was randomly being reported as unreachable which was about a half hour behind the others. The wierd thing is that only one node reported it as unreachable. The fix was just to set the slow node’s system time ahead to more closely match the other nodes. Since then the problem has not resurfaced. Very VERY strange, and it wasted most of my morning.</p>
+
+<p>(Yes I know they should be running ntp, its on the to-do list. I don’t know why they aren’t already running it. The entire cluster is due for a massive system overhaul where we wipe all the nodes and do a full system reinstall so I will address it then.)</p>
+
+	<p><h3><a href="/posts/cassandra-silliness.html">full text &raquo;</a></h3></p>
+<hr>
+
+<h2>
   <a href="/posts/how-to-read-papers.html">
     How to read research papers
   </a> 
@@ -313,6 +399,18 @@ managed to arrive at a very similar place as the original author whos paper you 
 			<div class="row">
                             <div class="col-lg-12">
                 <ul class="list-unstyled">
+				
+                  <li>
+                    <a href="/posts/spark-cassandra-gpu1.html">
+                      Getting Cassandra, Spark and Cuda to be interoperable
+                    </a>
+                  </li>
+				
+                  <li>
+                    <a href="/posts/cassandra-silliness.html">
+                      Random wierd Cassandra issue
+                    </a>
+                  </li>
 				
                   <li>
                     <a href="/posts/how-to-read-papers.html">
